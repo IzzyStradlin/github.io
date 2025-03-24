@@ -1,0 +1,35 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rfilop="http://example.org/ontology/rfilop#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
+         
+    <!-- Role Class Definition -->
+    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Role">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Role</rdfs:label>
+        <rdfs:comment>Defines the role of a party involved in the transport order.</rdfs:comment>
+    </rdf:Description>
+
+    <!-- Specific Role Instances (Sender, Consignee, etc.) -->
+    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Sender">
+        <rdf:type rdf:resource="http://example.org/ontology/rfilop#Role"/>
+        <rdfs:label>Sender</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Consignee">
+        <rdf:type rdf:resource="http://example.org/ontology/rfilop#Role"/>
+        <rdfs:label>Consignee</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Origin">
+        <rdf:type rdf:resource="http://example.org/ontology/rfilop#Role"/>
+        <rdfs:label>Origin</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Destination">
+        <rdf:type rdf:resource="http://example.org/ontology/rfilop#Role"/>
+        <rdfs:label>Destination</rdfs:label>
+    </rdf:Description>
+
+</rdf:RDF>
