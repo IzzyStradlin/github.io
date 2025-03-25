@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rfilop="https://github.com/IzzyStradlin/rfilop/blob/main/RFILOP.owl#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
          
-    <owl:Ontology rdf:about="http://www.example.org/ontology/rfilop#"/>
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
 
     <!-- LegOrder class definition -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#LegOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#process"/>
         <rdfs:label>LegOrder</rdfs:label>
@@ -16,109 +16,109 @@
     </rdf:Description>
 
     <!-- LegOrderNumber Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#LegOrderNumber">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrderNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>A unique identifier for the Leg Order, ensuring it can be referenced within the broader Transport Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- LegOrderType Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#LegOrderType">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrderType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Specifies the operational type of the Leg Order (e.g., loading, transfer, unloading).</rdfs:comment>
     </rdf:Description>
 
     <!-- LegSequence Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#LegSequence">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegSequence">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The sequential number of the Leg Order in relation to other legs within the Transport Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- PickupDate Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#PickupDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#PickupDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The earliest date when the goods can be picked up.</rdfs:comment>
     </rdf:Description>
 
     <!-- DeliveryDate Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#DeliveryDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#DeliveryDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The earliest date when the goods can be delivered.</rdfs:comment>
     </rdf:Description>
 
     <!-- Weight Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Weight">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#Weight">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The total weight of the Leg Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- Volume Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Volume">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#Volume">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The total volume of the Leg Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- ShipUnitCount Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ShipUnitCount">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#ShipUnitCount">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The total number of Ship Units associated with the Leg Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between LegOrder and ShipUnit -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasShipUnit">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#hasShipUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a LegOrder to one or more ShipUnits.</rdfs:comment>
     </rdf:Description>
 
      <!-- Relation between LegOrder and Stop -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasStop">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#hasStop">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#Stop"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Stop"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a LegOrder to one or more Stops that are part of the operational tasks of the carrier.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between LegOrder and TransportOrder -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasTransportOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#hasTransportOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a LegOrder to the TransportOrder it is part of, if applicable. Not all LegOrders are tied to a TransportOrder.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between LegOrder and InvolvedParty -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasInvolvedParty">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#hasInvolvedParty">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#Carrier"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a LegOrder to subjects involved.</rdfs:comment>
     </rdf:Description>
