@@ -130,7 +130,7 @@
     <!-- Relation between TransportOrder and ShipUnit -->
     <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#hasTransportOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource=https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a TransportOrder to one or more ShipUnits.</rdfs:comment>
