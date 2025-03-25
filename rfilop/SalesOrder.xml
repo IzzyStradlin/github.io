@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rfilop="https://github.com/IzzyStradlin/rfilop/blob/main/RFILOP.owl#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
 
-    <owl:Ontology rdf:about="http://www.example.org/ontology/rfilop#"/>
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
 
     <!-- SalesOrder class definition -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#SalesOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-endurant"/>
         <rdfs:label>SalesOrder</rdfs:label>
@@ -16,118 +16,118 @@
     </rdf:Description>
 
     <!-- SalesOrderNumber Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#SalesOrderNumber">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#SalesOrderNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The identifier of a Sales Order, uniquely referencing the agreement.</rdfs:comment>
     </rdf:Description>
 
     <!-- OrderDate Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ORDERDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#OrderDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The date when the Sales Order was created.</rdfs:comment>
     </rdf:Description>
 
     <!-- Commodity Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Commodity">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#Commodity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The type of commodity (e.g., electronics, clothing) involved in the Sales Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- Weight Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Weight">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#Weight">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The weight of the commodity involved in the Sales Order (measured in kilograms).</rdfs:comment>
     </rdf:Description>
 
     <!-- Volume Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Volume">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#Volume">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The volume of the commodity involved in the Sales Order (measured in cubic meters).</rdfs:comment>
     </rdf:Description>
 
     <!-- TotalShipUnitCount Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#TotalShipUnitCount">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#TotalShipUnitCount">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The total number of shipping units in the order.</rdfs:comment>
     </rdf:Description>
 
     <!-- DeclaredValue Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#DeclaredValue">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#DeclaredValue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The declared value of the sales order.</rdfs:comment>
     </rdf:Description>
 
     <!-- TotalRevenue Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#TotalRevenue">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#TotalRevenue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The total revenue generated by the order.</rdfs:comment>
     </rdf:Description>
 
     <!-- ExpectedResponseDate Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ExpectedResponseDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#ExpectedResponseDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The expected date for a response regarding the order.</rdfs:comment>
     </rdf:Description>
 
     <!-- ExpectedDistance Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ExpectedDistance">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#ExpectedDistance">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>The estimated distance involved in delivering the order.</rdfs:comment>
     </rdf:Description>
 
     <!-- hasTransportOrder Relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasTransportOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#hasTransportOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a SalesOrder to a corresponding TransportOrder.</rdfs:comment>
     </rdf:Description>
 
     <!-- Contract relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasContract">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#hasContract">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#Contract"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Contract"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a SalesOrder to one or more associated Contracts.</rdfs:comment>
     </rdf:Description>
 
     <!-- InvolvedParty relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasInvolvedParty">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrderSalesOrder#hasInvolvedParty">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#InvolvedParty"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a SalesOrder to one or more Involved Parties (e.g., Buyer, Seller, etc.).</rdfs:comment>
     </rdf:Description>
