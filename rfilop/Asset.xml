@@ -1,1 +1,18 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
+
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
+         
+    <!-- Asset Class Definition -->
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Asset">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Asset</rdfs:label>
+        <rdfs:comment>Defines Asset involved in the transport order.</rdfs:comment>
+    </rdf:Description>
+
+</rdf:RDF>
 
