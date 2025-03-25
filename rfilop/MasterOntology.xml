@@ -1,21 +1,23 @@
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+<rdf:RDF xmlns="http://izzystradlin.github.io/ontologies/rfilop/MasterOntology#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 
-    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology.xml">
+    <owl:Ontology rdf:about="http://izzystradlin.github.io/ontologies/rfilop/MasterOntology">
         <rdfs:comment>This is the master ontology that imports all other ontologies in the system.</rdfs:comment>
     </owl:Ontology>
 
     <!-- Importing other ontologies -->
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Activity.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Event.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Role.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Stop.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder.xml"/>
-    <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Trip.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Event.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/LegOrder.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Role.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Stop.xml"/>
+    <owl:imports rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder.xml"/>
+    <owl:imports rdf:about="http://izzystradlin.github.io/ontologies/rfilop/Trip.xml"/>
 
 </rdf:RDF>
