@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rfilop="https://github.com/IzzyStradlin/rfilop/blob/main/RFILOP.owl#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
          
     <owl:Ontology rdf:about="http://www.example.org/ontology/rfilop#"/>
 
     <!-- ShipUnit class definition -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ShipUnit">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-object"/>
         <rdfs:label>ShipUnit</rdfs:label>
@@ -16,12 +16,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#has-quality"/>
-                <owl:someValuesFrom rdf:resource="http://example.org/ontology/rfilop#ShipUnitIdentifier"/>
+                <owl:someValuesFrom rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnitIdentifier"/>
             </owl:Restriction>
+        </rdfs:subClassOf>
     </rdf:Description>
 
     <!-- ShipUnitIdentifier as an abstract-quality -->
-    <owl:Class rdf:about="http://example.org/ontology/rfilop#ShipUnitIdentifier">
+    <owl:Class rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnitIdentifier">
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:label>ShipUnitIdentifier</rdfs:label>
         <rdfs:comment>Represents an abstract quality of a Ship Unit used for identification.</rdfs:comment>
@@ -46,118 +47,118 @@
     </owl:ObjectProperty>
 
     <!-- DepthLevel Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#DepthLevel">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#DepthLevel">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>Represents the nesting level of the Ship Unit within the packaging hierarchy.</rdfs:comment>
     </rdf:Description>
 
     <!-- IsStackable Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#IsStackable">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#IsStackable">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>Indicates whether the Ship Unit can be stacked during transport or storage.</rdfs:comment>
     </rdf:Description>
     
     <!-- IsSplittable Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#IsSplittable">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#IsSplittable">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>Indicates whether the Ship Unit can be split into smaller parts.</rdfs:comment>
     </rdf:Description>
 
     <!-- IsCollapsed Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#IsCollapsed">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#IsCollapsed">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>Represents whether the Ship Unit is in a collapsed state, affecting its handling.</rdfs:comment>
     </rdf:Description>
 
     <!-- Weight Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Weight">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#Weight">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>The total weight of the Ship Unit, a physical property.</rdfs:comment>
     </rdf:Description>
 
     <!-- Volume Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Volume">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#Volume">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>The total volume of the Ship Unit, a physical property.</rdfs:comment>
     </rdf:Description>
 
     <!-- Height Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Height">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#Height">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>The height of the Ship Unit.</rdfs:comment>
     </rdf:Description>
 
     <!-- Length Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Length">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#Length">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>The length of the Ship Unit.</rdfs:comment>
     </rdf:Description>
 
     <!-- Width Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Width">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#Width">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#physical-quality"/>
         <rdfs:comment>The width of the Ship Unit.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between TransportOrder and ShipUnit -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasTransportOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#hasTransportOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource=https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a TransportOrder to one or more ShipUnits.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between LegOrder and ShipUnit -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasLegOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#hasLegOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a Order to one or more ShipUnits.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between ShipUnit and itself (self-relation) -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasShipUnit">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#hasShipUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a ShipUnit to itself, allowing recursive modeling of the units.</rdfs:comment>
     </rdf:Description>
 
     <!-- Relation between TransportDocument and ShipUnit -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasTransportDocument">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#hasTransportDocument">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#TransportDocument"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportDocument"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a Ship Unit to a Transport Document.</rdfs:comment>
     </rdf:Description>
