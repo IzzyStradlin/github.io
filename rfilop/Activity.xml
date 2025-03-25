@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rfilop="https://github.com/IzzyStradlin/rfilop/blob/main/RFILOP.owl#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
 
-    <owl:Ontology rdf:about="http://www.example.org/ontology/rfilop#"/>
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
 
     <!-- Activity Class -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Activity">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#Process"/>
         <rdfs:label>Activity</rdfs:label>
@@ -16,36 +16,36 @@
     </rdf:Description>
 
     <!-- Activity Properties -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ActivityNumber">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity#ActivityNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#Activity"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Activity#Activity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:label>Activity Number</rdfs:label>
         <rdfs:comment>Unique identifier for the activity.</rdfs:comment>
     </rdf:Description>
 
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ActivityType">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity#ActivityType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#Activity"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Activity#Activity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:label>Activity Type</rdfs:label>
         <rdfs:comment>The type of activity (e.g., loading, unloading, document processing).</rdfs:comment>
     </rdf:Description>
 
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#ExecutionDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity#ExecutionDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#Activity"/>
+        <rdfs:domain rdf:resource="hhttps://izzystradlin.github.io/ontologies/rfilop/Activity#Activity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal-quality"/>
         <rdfs:label>Execution Date</rdfs:label>
         <rdfs:comment>Date when the activity was executed.</rdfs:comment>
     </rdf:Description>
 
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#CutoffDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity#CutoffDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#Activity"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Activity#Activity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#temporal-quality"/>
         <rdfs:label>Cutoff Date</rdfs:label>
@@ -53,10 +53,10 @@
     </rdf:Description>
 
     <!-- hasInvolvedParty Relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasInvolvedParty">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Activity#hasInvolvedParty">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#Activity"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#InvolvedParty"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Activity"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:label>Has Involved Party</rdfs:label>
         <rdfs:comment>Links an activity to the involved parties (e.g., shipper, consignee, carrier).</rdfs:comment>
