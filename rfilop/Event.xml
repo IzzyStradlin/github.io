@@ -5,7 +5,7 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
 
-    <owl:Ontology rdf:about="http://www.example.org/ontology/rfilop#"/>
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
 
     <!-- Event Class -->
     <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Event">
