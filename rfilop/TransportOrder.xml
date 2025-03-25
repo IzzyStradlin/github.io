@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rfilop="https://github.com/IzzyStradlin/rfilop/blob/main/RFILOP.owl#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
          
-    <owl:Ontology rdf:about="http://www.example.org/ontology/rfilop#"/>
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
 
     <!-- Transport Order class definition -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#TransportOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#non-physical-endurant"/>
         <rdfs:label>TransportOrder</rdfs:label>
@@ -16,109 +16,109 @@
     </rdf:Description>
 
     <!-- TransportOrderNumber Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#TransportOrderNumber">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#TransportOrderNumber">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Represents a defining intrinsic quality used for order identification.</rdfs:comment>
     </rdf:Description>
 
     <!-- TransportMode Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#TransportMode">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#TransportMode">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Specifies the type of transportation (collection, linehaul, delivery, etc.).</rdfs:comment>
     </rdf:Description>
 
     <!-- BusinessFlowType Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#BusinessFlowType">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#BusinessFlowType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Denotes whether the flow is an export, import, or domestic.</rdfs:comment>
     </rdf:Description>
 
     <!-- GoodsType Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#GoodsType">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#GoodsType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Type of goods: parts, raw material, etc.</rdfs:comment>
     </rdf:Description>
 
     <!-- PickupDate Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#PickupDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#PickupDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Indicates when the goods are scheduled for pickup.</rdfs:comment>
     </rdf:Description>
 
     <!-- DeliveryDate Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#DeliveryDate">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#DeliveryDate">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Specifies the planned delivery date.</rdfs:comment>
     </rdf:Description>
 
     <!-- Volume Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Volume">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#Volume">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Denotes the total volume of goods in the shipment.</rdfs:comment>
     </rdf:Description>
 
     <!-- Weight Property -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#Weight">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#Weight">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="hhttps://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#abstract-quality"/>
         <rdfs:comment>Reflects the total gross weight of the goods.</rdfs:comment>
     </rdf:Description>
 
     <!-- hasTransportOrder relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasTransportOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#hasTransportOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#SalesOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part-of"/>
         <rdfs:comment>Relation linking a TransportOrder to one Sales Order.</rdfs:comment>
     </rdf:Description>
 
     <!-- hasShipUnit relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasShipUnit">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#hasShipUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#ShipUnit"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a Transport Order to one or more Ship Units.</rdfs:comment>
     </rdf:Description>
 
     <!-- hasLegOrder relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasLegOrder">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#hasLegOrder">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#LegOrder"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a Transport Order to one or more Leg Orders.</rdfs:comment>
     </rdf:Description>
 
     <!-- hasInvolvedParty relation -->
-    <rdf:Description rdf:about="http://example.org/ontology/rfilop#hasInvolvedParty">
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#hasInvolvedParty">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/ontology/rfilop#TransportOrder"/>
-        <rdfs:range rdf:resource="http://example.org/ontology/rfilop#InvolvedParty"/>
+        <rdfs:domain rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:range rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#part"/>
         <rdfs:comment>Relation linking a Transport Order to multiple Involved Parties.</rdfs:comment>
     </rdf:Description>
