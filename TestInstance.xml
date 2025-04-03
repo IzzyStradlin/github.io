@@ -1,0 +1,93 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rfilop="https://izzystradlin.github.io/ontologies/rfilop/">
+
+    <owl:Ontology rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Instances">
+        <rdfs:comment>This file contains instances of the SalesOrder model.</rdfs:comment>
+        <owl:imports rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/MasterOntology"/>
+    </owl:Ontology>
+
+    <!-- SalesOrder Instance -->
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder#SalesOrder1">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/SalesOrder"/>
+        <rdfs:label>Sales Order 1</rdfs:label>
+        <rdfs:comment>A sales order referencing two transport orders, an involved party, and a contract.</rdfs:comment>
+        <rfilop:hasTransportOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#TransportOrder1"/>
+        <rfilop:hasTransportOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#TransportOrder2"/>
+        <rfilop:hasInvolvedParty rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party1"/>
+        <rfilop:hasContract rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Contract#Contract1"/>
+    </rdf:Description>
+
+    <!-- TransportOrder Instances -->
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#TransportOrder1">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:label>Transport Order 1</rdfs:label>
+        <rdfs:comment>First transport order with two involved parties, three leg orders, and five ship units.</rdfs:comment>
+        <rfilop:hasInvolvedParty rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party2"/>
+        <rfilop:hasInvolvedParty rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party3"/>
+        <rfilop:hasLegOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrder1"/>
+        <rfilop:hasLegOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrder2"/>
+        <rfilop:hasLegOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrder3"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit1"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit2"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit3"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit4"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit5"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder#TransportOrder2">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/TransportOrder"/>
+        <rdfs:label>Transport Order 2</rdfs:label>
+        <rdfs:comment>Second transport order with two involved parties, three leg orders, and five ship units.</rdfs:comment>
+        <rfilop:hasInvolvedParty rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party4"/>
+        <rfilop:hasInvolvedParty rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party5"/>
+        <rfilop:hasLegOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrder4"/>
+        <rfilop:hasLegOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrder5"/>
+        <rfilop:hasLegOrder rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/LegOrder#LegOrder6"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit6"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit7"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit8"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit9"/>
+        <rfilop:hasShipUnit rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/ShipUnit#ShipUnit10"/>
+    </rdf:Description>
+
+    <!-- Contract Instance -->
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/Contract#Contract1">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/Contract"/>
+        <rdfs:label>Contract 1</rdfs:label>
+        <rdfs:comment>A contract associated with the sales order.</rdfs:comment>
+    </rdf:Description>
+
+    <!-- InvolvedParty Instances -->
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party1">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
+        <rdfs:label>Party 1</rdfs:label>
+        <rdfs:comment>The main party associated with the sales order.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party2">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
+        <rdfs:label>Party 2</rdfs:label>
+        <rdfs:comment>An involved party in Transport Order 1.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party3">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
+        <rdfs:label>Party 3</rdfs:label>
+        <rdfs:comment>An involved party in Transport Order 1.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party4">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
+        <rdfs:label>Party 4</rdfs:label>
+        <rdfs:comment>An involved party in Transport Order 2.</rdfs:comment>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty#Party5">
+        <rdf:type rdf:resource="https://izzystradlin.github.io/ontologies/rfilop/InvolvedParty"/>
+        <rdfs:label>Party 5</rdfs:label>
+        <rdfs:comment>An involved party in Transport Order 2.</rdfs:comment>
+    </rdf:Description>
+
+</rdf:RDF>
